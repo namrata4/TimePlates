@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+
+</head>
+<body>
+
+<header>
+		<div class="header-content" style="background-color: #ff4d4d; height: 20%">
+			<div class="header-content-inner" style="color: #ffffff">
+				<h1>TimePlates</h1>
+				<hr>
+			</div>
+		</div>
+	</header>
+
+	<div id="main" class="row" style="height:70%">
+	<div style="padding-top:150px">
+		<h1 style="font-size:63px">Welcome to TimePlates!</h1>
+		<hr>
+		<h2>Now plan your trips on your terms</h2>
+
+</div>
+	</div>
+
+
+	<div id="buttons" class="row" style="height:40%">
+	<div class="col-md-4"></div>
+	<div class="col-md-5">
+		<a style="top: 55px; position: relative; background-image:linear-gradient(to bottom,#996633 0,#996633 100%)" href="#about"
+			class="btn btn-primary btn-xl page-scroll" data-toggle="modal" data-target="#myModal">Plan a new Trip</a>
+			<a style="top: 55px; position: relative; background-image:linear-gradient(to bottom,#996633 0,#996633 100%)" href="#about"
+			class="btn btn-primary btn-xl page-scroll">View Planned Trips</a>
+			<button type="button" style="top: 55px; position: relative; background-image:linear-gradient(to bottom,#996633 0,#996633 100%)" 
+			class="btn btn-primary btn-xl page-scroll">Learn more about TimePlates</button></div>
+	<div class="col-md-3"></div>
+	</div>
+	
+	  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Some details of the trip</h4>
+        </div>
+        <div class="modal-body">
+         <form role="form" action="table.html">
+            <div class="form-group">
+              <label for="name"> Trip Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Name of the Trip">
+            </div>
+            <div class="form-group">
+              <label for="loc"> Some Locations you might visit</label>
+              <input type="text" class="form-control" id="loc" placeholder="Locations">
+            </div>
+            <div class="form-group">
+              <label for="days"> Number of days</label>
+              <input type="text" class="form-control" id="days" placeholder="Number of Days">
+            </div>
+            <div class="form-group">
+              <label> Things you would like to plan</label><br><br>
+              <label><input type="checkbox" id="thingsToDo" value="" checked>Things to do</label><br>
+               <label><input type="checkbox" id="flights" value="" checked>Flights</label><br>
+                <label><input type="checkbox" id="lodging" value="" checked>Lodging</label><br>
+                 <label><input type="checkbox" id="dining" value="" checked>Dining</label><br>
+            </div>
+              <button type="submit" class="btn btn-success btn-block">Next</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+</html>

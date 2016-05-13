@@ -1,0 +1,22 @@
+@CHARSET "ISO-8859-1";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+#main {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-image: url(../images/time22.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+} 
