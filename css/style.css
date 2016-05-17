@@ -11,8 +11,8 @@ body {
     position: relative;
     width: 100%;
     min-height: auto;
-    text-align: center;
     color: #fff;
+    text-align: center;
     background-image: url(../images/time22.jpg);
     background-position: center;
     -webkit-background-size: cover;
@@ -20,3 +20,6 @@ body {
     background-size: cover;
     -o-background-size: cover;
 } 
+div.logo{
+    height:10%;
+}
