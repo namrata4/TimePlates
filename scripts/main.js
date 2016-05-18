@@ -16,6 +16,9 @@ var authenticatedClient = null;
   var SCOPES = ['https://www.googleapis.com/auth/drive'];
   
   function authorize(){
+	  
+		document.getElementById("storeSelect").style.display="none";
+	  
 	  gapi.load('auth2', function () {
           gapi.auth2.init({
             'client_id': CLIENT_ID,
@@ -25,25 +28,31 @@ var authenticatedClient = null;
           
           googAuth= gapi.auth2.getAuthInstance();
            })
-           setTimeout(checkSignin, 1000);
+           
+          setTimeout(checkSignin, 1000);
   }
 	  
 function checkSignin(){
 	console.log('Checking Auth')
+	var ret;
     if (googAuth.isSignedIn.get()) {
       loadDriveAPI()
+      createFolders();
     } else {
       console.log('Attempting Sign In')
       // Need to have them sign in
       googAuth.signIn().then(function () {
 		console.log('AUTH SUCCESS')
         loadDriveAPI()
+        createFolders();
       }, function (error) {
         // Failed to authenticate for some reason
 		console.log('AUTH FAILED')
         googleAuth.reject(error)
+       
       })
     }
+    return ret;
 	}
 	
 function loadDriveAPI(){
@@ -126,6 +135,12 @@ function constructIMObject (store) {
 		
 		 
 		}
+	
+	function createFolders(){
+	
+		document.getElementById("mainDiv").style.display="block";
+		
+	}
   
   
   

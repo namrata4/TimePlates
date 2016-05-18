@@ -1,60 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://apis.google.com/js/client.js"></script>
-     <script src="lib/item-mirror.js" type="text/javascript"></script>
-     <script type="text/javascript" src="scripts/main.js"></script>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://apis.google.com/js/client.js"></script>
+<script src="lib/item-mirror.js" type="text/javascript"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+
+<script type="text/javascript">
      
-     <script type="text/javascript">
      
-     window.onload=function(){
-    	authorize();
-    	setTimeout(function(){document.getElementById("mainDiv").style.display="block";}, 5000);
-    	 
-    	 
+     function storeSelector(){
+    	 authorize();
+    	
      }
+     
+   
      </script>
-  
+
+<style type="text/css">
+.rowheader {
+	background-color: #fcf8e3;
+}
+
+.rowheader:hover {
+	background-color: #faf2cc;
+}
+
+.header {
+	background-color: #dff0d8;
+}
+
+.header:hover {
+	background-color: #d0e9c6;
+}
+</style>
+
+
 </head>
 
 <body>
+	<header>
+		<div class="header-content" style="height: 20%">
+			<div class="header-content-inner">
+				<h1>TimePlates</h1>
+				<hr>
+			</div>
+		</div>
+	</header>
 
-<div class="container" id="mainDiv" style="display: none">
-  <h2>Trip Name</h2>
-  <p>The .table-bordered class adds borders to a table:</p>            
-  <table class="table table-bordered table-hover">
-    <thead>
-      <tr>
-        <th>Day 1</th>
-        <th>Day 2</th>
-        <th>Day 3</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="container" id="storeSelect">
+<div   class="panel panel-default" style="text-align: center;">
+<div class="panel-heading">Please select the store to connect</div>
+  <div class="panel-body">
+  <button onclick="storeSelector();"   class="btn btn-success" style="width:120px">Google Drive</button>
+<button onclick="storeSelector();"  class="btn btn-success" style="width:120px">Dropbox</button>
+				
+  </div>
 </div>
+</div>
+
+
+	<div class="container" id="mainDiv" style="display: none">
+		<h2>Trip Name</h2>
+
+		<div class="well">
+
+			<table class="table table-bordered table-hover">
+				<thead>
+					<tr class="header">
+						<th><b>Things to plan</b></th>
+						<th><b>Day 1</b></th>
+						<th><b>Day 2</b></th>
+						<th><b>Day 3</b></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row" class="rowheader">Date:</th>
+						<td>May 20,2016</td>
+						<td>May 21,2016</td>
+						<td>May 22, 2016</td>
+					</tr>
+					<tr>
+						<th scope="row" class="rowheader">Leave From:</th>
+						<td>Seattle</td>
+						<td>Portland</td>
+						<td>Arizona</td>
+					</tr>
+					<tr>
+						<th scope="row" class="rowheader">Transportation:</th>
+						<td>Bus</td>
+						<td>Bus</td>
+						<td>Bus</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
 
 </body>
 </html>
