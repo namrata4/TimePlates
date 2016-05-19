@@ -15,19 +15,13 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	
 
 </head>
 <body style = "height: 100%">
 
 <div class = "logo" style = "margin-top: 0px,margin-bottom: 0px">
     <h3 style = "margin-top :10px; margin-left: 10px"><img src = "../images/logo.png" ALIGN = MIDDLE height = "60px" width = "60px" >TimePlates</h3>
-    
-
-
 </div>
-
-
 
 <div id="main" class="row" style="height:90%">
 	<div style="padding-top:190px">
@@ -51,9 +45,6 @@
   </div>
   </div>
 </div>
-
-
-	
 	
 	  <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -70,20 +61,65 @@
               <label for="name"> Trip Name</label>
               <input type="text" class="form-control" id="name" placeholder="Name of the Trip">
             </div>
-            <div class="form-group">
-              <label for="loc"> Some Locations you might visit</label>
-              <input type="text" class="form-control" id="loc" placeholder="Locations">
+            
+            <div class = "modal-date" >
+              <label for="days"> Trip starts from</label>
+              <input type="text" id="startDate" placeholder="2016-1-1">
+              <label for="days">and ends at</label>
+              <input type="text" id="endDate" placeholder="2016-1-10">
             </div>
-            <div class="form-group">
-              <label for="days"> Number of days</label>
-              <input type="text" class="form-control" id="days" placeholder="Number of Days">
+            
+            <div>
+              <label for="type">Select the Trip Type</label>
+              <ul>
+                <li>
+                  <input type="checkbox" id="myCheckbox1" />
+                  <label style = "border: 1px solid #fff;
+                                  padding: 10px;
+                                  display: block;
+                                  position: relative;
+                                  margin: 10px;
+                                  cursor: pointer;"
+                  for="myCheckbox1"><img src="http://www.lesta.fr/wp-content/uploads/2015/12/voyage-usa.jpg" /></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="myCheckbox2" />
+                  <label style = "border: 1px solid #fff;
+                                  padding: 10px;
+                                  display: block;
+                                  position: relative;
+                                  margin: 10px;
+                                  cursor: pointer;"
+                  for="myCheckbox2"><img src="http://www.poweredbystl.com/wp-content/uploads/2015/02/business-travel.jpg" /></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="myCheckbox3" />
+                  <label style = "border: 1px solid #fff;
+                                  padding: 10px;
+                                  display: block;
+                                  position: relative;
+                                  margin: 10px;
+                                  cursor: pointer;"
+                  for="myCheckbox3"><img src="http://www.lesta.fr/wp-content/uploads/2015/12/voyage-usa.jpg" /></label>
+                </li>
+                <li>
+                  <input type="checkbox" id="myCheckbox4" />
+                  <label style = "border: 1px solid #fff;
+                                  padding: 10px;
+                                  display: block;
+                                  position: relative;
+                                  margin: 10px;
+                                  cursor: pointer;"
+                  for="myCheckbox4"><img src="http://www.lesta.fr/wp-content/uploads/2015/12/voyage-usa.jpg" /></label>
+                </li>
+              </ul>
             </div>
             <div class="form-group">
               <label> Things you would like to plan</label><br><br>
-              <label><input type="checkbox" id="thingsToDo" value="" checked>Things to do</label><br>
-               <label><input type="checkbox" id="flights" value="" checked>Flights</label><br>
-                <label><input type="checkbox" id="lodging" value="" checked>Lodging</label><br>
-                 <label><input type="checkbox" id="dining" value="" checked>Dining</label><br>
+              <label><input type="checkbox" id="thingsToDo" value="" checked>Things to do</label>
+               <label><input type="checkbox" id="flights" value="" checked>Flights</label>
+                <label><input type="checkbox" id="lodging" value="" checked>Lodging</label>
+                 <label><input type="checkbox" id="dining" value="" checked>Dining</label>
             </div>
               <button type="submit" class="btn btn-success btn-block">Next</button>
           </form>
