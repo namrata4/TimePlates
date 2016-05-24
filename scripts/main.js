@@ -4,8 +4,8 @@
 var googAuth;
   
   var im,
+  rootim,
   store,
-  rootMirror,
   previous,
   associations,
   selectedAssociation
@@ -37,14 +37,14 @@ function checkSignin(){
 	var ret;
     if (googAuth.isSignedIn.get()) {
       loadDriveAPI()
-      createFolders();
+     // createBaseFolderStructure();
     } else {
       console.log('Attempting Sign In')
       // Need to have them sign in
       googAuth.signIn().then(function () {
 		console.log('AUTH SUCCESS')
         loadDriveAPI()
-        createFolders();
+      //  createBaseFolderStructure();
       }, function (error) {
         // Failed to authenticate for some reason
 		console.log('AUTH FAILED')
@@ -76,11 +76,13 @@ function connectDrive () {
   }
   
 function constructIMObject (store) {
+	debugger;
 	  im = new ItemMirror('Thisisastring', function (error, newMirror) {
 	    if (error) {
 	      console.log(error)
 	    } else {
-	      im = newMirror
+	      im = newMirror;
+	      rootim=newMirror;
 	      // if(pathURI == "/") {
 	      //     handleLastNavigated(newMirror)
 	      // }
@@ -91,28 +93,38 @@ function constructIMObject (store) {
 	          var displayText = im.getAssociationDisplayText(associations[i])
 	          if (displayText == store) {
 	            navigateMirror(associations[i])
-	           
+	           rootim=im;
 	          }
 	        }
 	      } else {
 	       refreshIMDisplay()
 	        
 	      }
+	    
 	    }
 	  })
+	  
 	}
 
 	// Attempts to navigate and display a new itemMirror association
-	function navigateMirror (guid) {
-	  im.createItemMirrorForAssociatedGroupingItem(guid, function (error, newMirror) {
-	    if (!error) {
-	      im = newMirror
-	      refreshIMDisplay()
-	    } else {
-	      console.log(error)
-	    }
-	  })
-	}
+function navigateMirror(guid) {
+	im.createItemMirrorForAssociatedGroupingItem(guid, function(error, newMirror) {
+
+		if(!error) {
+			im = newMirror;
+			  createBaseFolderStructure();
+
+      if(!rootim) {
+    	  rootim = im; // Save root to be used for home button and root fragment saving
+      }
+
+      refreshIMDisplay();
+		} else {
+			console.log(error);
+		}
+	});
+
+}
 	function refreshIMDisplay () {
 		/* var div= document.getElementById("authorize-div");
 		div.style.display="none"; */
@@ -136,7 +148,41 @@ function constructIMObject (store) {
 		 
 		}
 	
-	function createFolders(){
+	function createBaseFolderStructure(){
+		debugger;
+		var options= [
+		              {
+		 "displayText":"Trip1",
+		"localItem":"TimePlates",
+		"isGroupingItem":"true"}];
+		
+		var days=3;
+		var tripim;
+		im.createAssociation(options[0], function(error,GUID){
+			if(!error)
+				{
+				im.createItemMirrorForAssociatedGroupingItem(GUID, function (error, newMirror) {
+				    if (!error) {
+				    	tripim = newMirror
+				    } else {
+				      console.log(error);
+				      alert("Error in creating Folders, Please try connecting again.");
+						document.getElementById("mainDiv").style.display="none";
+						document.getElementById("storeSelect").style.display="block";
+				    }
+				  })
+				}
+			else{
+				alert("Error in creating Folders, Please try connecting again.");
+				document.getElementById("mainDiv").style.display="none";
+				document.getElementById("storeSelect").style.display="block";
+				
+			}
+			
+		});
+		
+		
+		
 	
 		document.getElementById("mainDiv").style.display="block";
 		

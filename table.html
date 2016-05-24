@@ -11,17 +11,23 @@
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://apis.google.com/js/client.js"></script>
-<script src="lib/item-mirror.js" type="text/javascript"></script>
+<script src="lib/item-mirror-new.js" type="text/javascript"></script>
 <script type="text/javascript" src="scripts/main.js"></script>
 
 <script type="text/javascript">
+     
+     var tripName= sessionStorage.getItem("tripName");
+     var days= sessionStorage.getItem("days");
      
      
      function storeSelector(){
     	 authorize();
     	
      }
-     
+     window.onload = function() {
+        
+     document.getElementById("title").innerHTML=tripName;
+  }
    
      </script>
 
@@ -69,7 +75,7 @@
 
 
 	<div class="container" id="mainDiv" style="display: none">
-		<h2>Trip Name</h2>
+		<h2 id="title"></h2>
 
 		<div class="well">
 
@@ -84,22 +90,34 @@
 				</thead>
 				<tbody>
 					<tr>
-						<th scope="row" class="rowheader">Date:</th>
-						<td>May 20,2016</td>
-						<td>May 21,2016</td>
-						<td>May 22, 2016</td>
+						<th scope="row" class="rowheader">Transportation (Car/bike rentals/Flights)</th>
+						<td></td>
+						<td></td>
+						<td></td>
 					</tr>
 					<tr>
-						<th scope="row" class="rowheader">Leave From:</th>
-						<td>Seattle</td>
-						<td>Portland</td>
-						<td>Arizona</td>
+						<th scope="row" class="rowheader">Travel Sights</th>
+						<td></td>
+						<td></td>
+						<td></td>
 					</tr>
 					<tr>
-						<th scope="row" class="rowheader">Transportation:</th>
-						<td>Bus</td>
-						<td>Bus</td>
-						<td>Bus</td>
+						<th scope="row" class="rowheader">Meals/Restaurants</th>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th scope="row" class="rowheader">Hotel/Lodging</th>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th scope="row" class="rowheader">Fuel Stops</th>
+						<td></td>
+						<td></td>
+						<td></td>
 					</tr>
 				</tbody>
 			</table>
