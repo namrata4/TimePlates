@@ -18,17 +18,55 @@
      
      var tripName= sessionStorage.getItem("tripName");
      var days= sessionStorage.getItem("days");
+	 console.log(days);
      
      
      function storeSelector(){
     	 authorize();
-    	
      }
+	 
      window.onload = function() {
-        
      document.getElementById("title").innerHTML=tripName;
+	 addColumn('mtable');
   }
-   
+  
+   function addColumn(tblId)
+{
+	
+	for(var i = 1; i <= days; i++){
+		 console.log(i);
+	var tblHeadObj = document.getElementById(tblId).tHead;
+     //console.log(tblHeadObj);
+    // console.log("tblHeadObj.rows.length: "+ tblHeadObj.rows.length);
+	 //console.log(tblHeadObj.rows);
+	 
+	
+	for (var h=0; h<tblHeadObj.rows.length; h++) {
+        // console.log("2")
+       
+		var newTH = document.createElement('th');
+		
+		tblHeadObj.rows[h].appendChild(newTH);
+		 newTH.innerHTML = 'day'+i;
+	}
+	
+	var tblBodyObj = document.getElementById(tblId).tBodies[0];
+	
+	
+		
+	for (var j=0; j<tblBodyObj.rows.length; j++) {
+		// console.log(tblBodyObj);
+		//console.log("2")
+		var newCell = tblBodyObj.rows[j].insertCell(-1);
+		var id;
+		id = "cell"+i+j;
+		newCell.setAttribute("id",id);
+		// newCell.innerHTML = '[td] row:' + j + ', cell: ' + (tblBodyObj.rows[j].cells.length - 1)
+	}
+	}
+}
+  
+
      </script>
 
 <style type="text/css">
@@ -76,48 +114,67 @@
 
 	<div class="container" id="mainDiv" style="display: none">
 		<h2 id="title"></h2>
-
+		
+		
 		<div class="well">
 
-			<table class="table table-bordered table-hover">
+			<table class="table table-bordered table-hover" id="mtable">
 				<thead>
 					<tr class="header">
 						<th><b>Things to plan</b></th>
-						<th><b>Day 1</b></th>
+						<!--<th><b>Day 1</b></th>
 						<th><b>Day 2</b></th>
-						<th><b>Day 3</b></th>
+						<th><b>Day 3</b></th>-->
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<th scope="row" class="rowheader">Transportation (Car/bike rentals/Flights)</th>
+						<th scope="row" class="rowheader">Leave from</th>
+						<!--<td></td>
 						<td></td>
-						<td></td>
-						<td></td>
+						<td></td>-->
 					</tr>
 					<tr>
-						<th scope="row" class="rowheader">Travel Sights</th>
+						<th scope="row" class="rowheader">Morning Activities</th>
+						<!--<td></td>
 						<td></td>
-						<td></td>
-						<td></td>
+						<td></td>-->
 					</tr>
 					<tr>
-						<th scope="row" class="rowheader">Meals/Restaurants</th>
+						<th scope="row" class="rowheader">Lunch</th>
+						<!--<td></td>
 						<td></td>
-						<td></td>
-						<td></td>
+						<td></td>-->
 					</tr>
 					<tr>
-						<th scope="row" class="rowheader">Hotel/Lodging</th>
+						<th scope="row" class="rowheader">Afternoon Activities</th>
+						<!--<td></td>
 						<td></td>
-						<td></td>
-						<td></td>
+						<td></td>-->
 					</tr>
 					<tr>
-						<th scope="row" class="rowheader">Fuel Stops</th>
+						<th scope="row" class="rowheader">Dinner</th>
+						<!--<td></td>
 						<td></td>
+						<td></td>-->
+					</tr>
+				    <tr>
+						<th scope="row" class="rowheader">Night Activities</th>
+						<!--<td></td>
 						<td></td>
+						<td></td>-->
+					</tr>
+					<tr>
+						<th scope="row" class="rowheader">Lodging</th>
+						<!--<td></td>
 						<td></td>
+						<td></td>-->
+					</tr>
+					<tr>
+						<th scope="row" class="rowheader">Destination</th>
+						<!--<td></td>
+						<td></td>
+						<td></td>-->
 					</tr>
 				</tbody>
 			</table>
