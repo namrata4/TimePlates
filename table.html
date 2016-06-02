@@ -61,6 +61,12 @@
 		var id;
 		id = "cell"+i+j;
 		newCell.setAttribute("id",id);
+		if (0<j && j<tblBodyObj.rows.length-1){
+			console.log(j);
+			newCell.setAttribute("class","cellRightClick");
+		}
+		
+		newCell.setAttribute("contentEditable","true");
 		// newCell.innerHTML = '[td] row:' + j + ', cell: ' + (tblBodyObj.rows[j].cells.length - 1)
 	}
 	}
