@@ -13,6 +13,10 @@
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/style.css">
+<link href="css/full-slider.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+ 
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
 <script
@@ -69,43 +73,139 @@
 
 
 </head>
+
 <body style="height: 100%">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+				<img src="images/TP icon.gif" ALIGN=left height="60px" width="60px" >Trip Planner</a>
+            </div>
 
-	<div class="logo" style="margin-top: 0px, margin-bottom: 0px">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#something">Learn more about us</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
-		<h3 style="margin-top: 10px; margin-left: 10px">
-			<img src="images/logo.png" ALIGN=MIDDLE height="60px" width="60px">TimePlates
-		</h3>
+<header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
 
-
-
-	</div>
-
-	<div id="main" class="row" style="height: 90%">
-		<div style="padding-top: 190px">
-			<h1 style="font-size: 63px">Welcome to TimePlates!</h1>
-			<h2 style="font-size: 20px">Now plan your trips on your terms</h2>
-		</div>
-		<div style="position: absolute; bottom: 0; width: 100%; height: 50px;">
-			<div id="buttons" class="row" style="height: 10%">
-				<div class="col-md-4"></div>
-				<div class="col-md-5">
-					<a
-						style="top: 0px; position: relative; background-image: linear-gradient(to bottom, #996633 0, #996633 100%)"
-						href="#about" class="btn btn-primary btn-xl page-scroll"
-						data-toggle="modal" data-target="#myModal">Plan a new Trip</a> <a
-						style="top: 0px; position: relative; background-image: linear-gradient(to bottom, #996633 0, #996633 100%)"
-						href="#about" class="btn btn-primary btn-xl page-scroll">View
-						Planned Trips</a>
-					<button type="button"
-						style="top: 0px; position: relative; background-image: linear-gradient(to bottom, #996633 0, #996633 100%)"
-						class="btn btn-primary btn-xl page-scroll">Learn more
-						about TimePlates</button>
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Set the first background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('images/Slideshow -3.jpg');"></div>
+                <div class="carousel-content">
+					<p><b>PLAN TRIPS ON YOUR TERMS</b></p>
 				</div>
-				<div class="col-md-3"></div>
-			</div>
-		</div>
-	</div>
+				<div class="carousel-caption">
+					<div style="position: absolute; bottom: 0; width: 100%; height: 100px;">
+						<div id="buttons" class="row" style="height: 10%">
+							<div>
+								<a
+									style="top: 0px; position: relative; "
+									href="#about" class="btn btn-primary btn-xl page-scroll"
+									data-toggle="modal" data-target="#myModal">Plan a new Trip</a> 
+								<!--<a
+									style="top: 0px; position: relative; "
+									href="#about" class="btn btn-primary btn-xl page-scroll">View
+									Planned Trips</a>-->
+								<!--<button type="button"
+									style="top: 0px; position: relative; "
+									class="btn btn-primary btn-xl page-scroll">Learn more
+									about TimePlates</button>-->
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the second background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('images/Slideshow -2.jpg');"></div>
+                <div class="carousel-content">
+					<p><b>DO YOUR VACATION JUST RIGHT</b></p>
+				</div>
+				<div class="carousel-caption">
+					<div style="position: absolute; bottom: 0; width: 100%; height: 100px;">
+						<div id="buttons" class="row" style="height: 10%">
+							<div>
+								<a
+									style="top: 0px; position: relative; "
+									href="#about" class="btn btn-primary btn-xl page-scroll"
+									data-toggle="modal" data-target="#myModal">Plan a new Trip</a> 
+								<!--<a
+									style="top: 0px; position: relative; "
+									href="#about" class="btn btn-primary btn-xl page-scroll">View
+									Planned Trips</a>-->
+								<!--<button type="button"
+									style="top: 0px; position: relative; "
+									class="btn btn-primary btn-xl page-scroll">Learn more
+									about TimePlates</button>-->
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('images/Slideshow -8.jpg');"></div>
+                <div class="carousel-content">
+					<p><b>CLOUD YOUR TRAVEL PLAN</b></p>
+				</div>
+				<div class="carousel-caption">
+                    <div style="position: absolute; bottom: 0; width: 100%; height: 100px;">
+						<div id="buttons" class="row" style="height: 10%">
+							<div>
+								<a
+									style="top: 0px; position: relative; "
+									href="#about" class="btn btn-primary btn-xl page-scroll"
+									data-toggle="modal" data-target="#myModal">Plan a new Trip</a> 
+								<!--<a
+									style="top: 0px; position: relative; "
+									href="#about" class="btn btn-primary btn-xl page-scroll">View
+									Planned Trips</a>-->
+								<!--<button type="button"
+									style="top: 0px; position: relative; "
+									class="btn btn-primary btn-xl page-scroll">Learn more
+									about TimePlates</button>-->
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+
+    </header>
+	
 
 	<div class="modal fade" id="myModal" role="dialog">
 		<div class="modal-dialog">
@@ -160,22 +260,32 @@
 								<li><input type="checkbox" id="myCheckbox1" value="roadTrip"/> <label
 									style="border: 1px solid #fff; padding: 10px; display: block; position: relative; margin: 10px; cursor: pointer;"
 									for="myCheckbox1"><img
-										src="http://www.lesta.fr/wp-content/uploads/2015/12/voyage-usa.jpg" /></label>
+										src="images/Road Trip photo.jpg" /></label>
 								</li>
 								<li><input type="checkbox" id="myCheckbox2" value="businessTrip"/> <label
 									style="border: 1px solid #fff; padding: 10px; display: block; position: relative; margin: 10px; cursor: pointer;"
 									for="myCheckbox2"><img
-										src="http://www.poweredbystl.com/wp-content/uploads/2015/02/business-travel.jpg" /></label>
+										src="images/Office Trip photo.jpg" /></label>
 								</li>
 								<li><input type="checkbox" id="myCheckbox3" /> <label
 									style="border: 1px solid #fff; padding: 10px; display: block; position: relative; margin: 10px; cursor: pointer;"
 									for="myCheckbox3"><img
-										src="http://www.lesta.fr/wp-content/uploads/2015/12/voyage-usa.jpg" /></label>
+										src="images/Honey Moon photo.jpg" /></label>
 								</li>
 								<li><input type="checkbox" id="myCheckbox4" /> <label
 									style="border: 1px solid #fff; padding: 10px; display: block; position: relative; margin: 10px; cursor: pointer;"
 									for="myCheckbox4"><img
-										src="http://www.lesta.fr/wp-content/uploads/2015/12/voyage-usa.jpg" /></label>
+										src="images/Family Vacation photo.jpg" /></label>
+								</li>
+								<li><input type="checkbox" id="myCheckbox5" /> <label
+									style="border: 1px solid #fff; padding: 10px; display: block; position: relative; margin: 10px; cursor: pointer;"
+									for="myCheckbox4"><img
+										src="images/Cruise photo.jpg" /></label>
+								</li>
+								<li><input type="checkbox" id="myCheckbox5" /> <label
+									style="border: 1px solid #fff; padding: 10px; display: block; position: relative; margin: 10px; cursor: pointer;"
+									for="myCheckbox4"><img
+										src="images/BleisureTravel photo.jpg" /></label>
 								</li>
 							</ul>
 						</div>
